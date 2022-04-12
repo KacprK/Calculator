@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(9, 9, 121, 1) 30%,
+        rgba(0, 212, 255, 1) 100%
+    );
+    color: white;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 500px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    min-height: 100px;
+    padding: 4px;
+    word-wrap: break-word;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(5, 20%);
+    align-items: center;
+    justify-items: center;
+    height: 400px;
+}
+
+.equals {
+    grid-row: 4/6;
+    grid-column: 4/5;
+}
+
+button {
+    background-color: #ffc0cb;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 26px;
+    border: 1px solid #ffd1dc;
+}
+
+button:hover {
+    background-color: #ffd1dc;
+}
+
+.currentNumber {
+    min-height: 50px;
+    font-size: 40px;
+}
+
+.previousNumber {
+    min-height: 25px;
+    font-size: 20px;
+}
+
+.operation {
+    min-height: 25px;
+    font-size: 20px;
+}
